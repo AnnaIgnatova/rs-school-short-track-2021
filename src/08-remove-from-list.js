@@ -18,15 +18,15 @@
  */
 
 function removeKFromList(l, k) {
-  let list = l;
+  let curValue = l;
 
-  if (list.value === k) {
-    list = list.next;
+  if (curValue.value === k) {
+    curValue = curValue.next;
   }
-  if (nextValue) {
-    list.next = removeKFromList(list.next, k);
+  if (curValue.next) {
+    curValue.next = removeKFromList(curValue.next, k);
   }
-  return list;
+  return curValue;
 }
 
 module.exports = removeKFromList;
